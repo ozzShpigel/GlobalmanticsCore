@@ -17,6 +17,7 @@ jobs:
       #   uses: microsoft/setup-msbuild@v1.1
 
       - name: Nuget restore
+        uses: nuget/setup-nuget@v1
         run: Nuget restore
 
       - name: Build app for release
