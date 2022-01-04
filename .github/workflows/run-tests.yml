@@ -18,7 +18,7 @@ jobs:
       #   uses: microsoft/setup-msbuild@v1.1
 
       - name: Nuget restore       
-        run: Nuget restore
+        run: nuget restore
 
       - name: Build app for release
         run:  dotnet build --Configuration Release
