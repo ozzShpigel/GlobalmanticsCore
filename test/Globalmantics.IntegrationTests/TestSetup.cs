@@ -98,6 +98,8 @@ namespace Globalmantics.IntegrationTests
             {
                 DataSource = @"localhost",
                 InitialCatalog = "master",
+                UserID = "dotnetuser",
+                Password = "dotnetuser"
             };
 
         private static string Filename => Path.Combine(
