@@ -96,9 +96,8 @@ namespace Globalmantics.IntegrationTests
         private static SqlConnectionStringBuilder Master =>
             new SqlConnectionStringBuilder
             {
-                DataSource = @"(LocalDB)\MSSQLLocalDB",
+                DataSource = @"localhost",
                 InitialCatalog = "master",
-                IntegratedSecurity = true
             };
 
         private static string Filename => Path.Combine(

@@ -15,13 +15,12 @@ namespace Globalmantics.IntegrationTests
                 context.Database.BeginTransaction();
             return context;
         }
-
+S
         private static SqlConnectionStringBuilder Globalmantics =>
             new SqlConnectionStringBuilder
             {
-                DataSource = @"(LocalDB)\MSSQLLocalDB",
-                InitialCatalog = "Globalmantics",
-                IntegratedSecurity = true
+                DataSource = @"localhost",
+                InitialCatalog = "Globalmantics"
             };
     }
 }
