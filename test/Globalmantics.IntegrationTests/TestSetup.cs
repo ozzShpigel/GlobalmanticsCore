@@ -98,6 +98,7 @@ namespace Globalmantics.IntegrationTests
             {
                 DataSource = @"localhost",
                 InitialCatalog = "master",
+                IntegratedSecurity = false,
                 UserID = "dotnetuser",
                 Password = "dotnetuser"
             };
