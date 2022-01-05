@@ -15,7 +15,7 @@ namespace Globalmantics.IntegrationTests
                 context.Database.BeginTransaction();
             return context;
         }
-S
+
         private static SqlConnectionStringBuilder Globalmantics =>
             new SqlConnectionStringBuilder
             {
