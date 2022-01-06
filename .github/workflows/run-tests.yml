@@ -17,6 +17,9 @@ jobs:
       - name: Nuget restore       
         run: nuget restore
 
+      - name: Sudo
+        run:  sudo apt-get dotnet-dev-1.0.0-preview3-00456
+
       - name: Build app for release
         run:  dotnet build --configuration Release
         
