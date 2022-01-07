@@ -99,8 +99,8 @@ namespace Globalmantics.IntegrationTests
                 DataSource = @"localhost",
                 InitialCatalog = "master",
                 IntegratedSecurity = false,
-                UserID = "dotnetuser",
-                Password = "dotnetuser"
+                UserID = "sa",
+                Password = "dbatools.I0"
             };
 
         private static string Filename => Path.Combine(
