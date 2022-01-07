@@ -14,8 +14,8 @@ jobs:
       - uses: actions/checkout@master
       - uses: nuget/setup-nuget@v1
 
-      - name: Nuget restore       
-        run: nuget restore
+      # - name: Nuget restore       
+      #   run: nuget restore
 
       - name: Build app for release
         run:  dotnet build --configuration Release
