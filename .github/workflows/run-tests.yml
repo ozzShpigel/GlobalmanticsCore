@@ -17,8 +17,8 @@ jobs:
       # - name: Nuget restore       
       #   run: nuget restored
 
-      # - name: Build app for release
-      #   run:  dotnet build --configuration Release
+      - name: Build app for release
+        run:  dotnet build --configuration Release
         
       - name: Install a SQL Server suite of tools
         uses: potatoqualitee/mssqlsuite@v1
