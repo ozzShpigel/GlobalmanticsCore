@@ -22,8 +22,6 @@ namespace Globalmantics.IntegrationTests
                 DataSource = @"localhost",
                 InitialCatalog = "Globalmantics",
                 IntegratedSecurity = false,
-                UserID = "SA",
-                Password = "Qwe12345"
             };
     }
 }
