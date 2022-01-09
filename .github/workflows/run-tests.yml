@@ -25,8 +25,8 @@ jobs:
         with:
           install: sqlengine, sqlpackage
 
-      - name: Run sqlclient
-        run: sqlcmd -S localhost -U sa -P dbatools.I0 -d tempdb -Q "SELECT @@version;"    
+      # - name: Run sqlclient
+      #   run: sqlcmd -S localhost -U sa -P dbatools.I0 -d tempdb -Q "SELECT @@version;"    
 
       - name: Run Unit Tests
         run: dotnet test ./test/Globalmantics.UnitTests/Globalmantics.UnitTests.csproj --logger "trx;LogFileName=test-result.trx"
