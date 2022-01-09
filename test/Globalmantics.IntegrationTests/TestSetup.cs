@@ -97,7 +97,7 @@ namespace Globalmantics.IntegrationTests
             new SqlConnectionStringBuilder
             {
                 DataSource = @"localhost",
-                InitialCatalog = "master",
+                InitialCatalog = "Globalmantics",
                 IntegratedSecurity = false,
                 UserID = "SA",
                 Password = "Qwe12345"

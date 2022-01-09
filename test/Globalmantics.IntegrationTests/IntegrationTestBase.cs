@@ -20,7 +20,10 @@ namespace Globalmantics.IntegrationTests
             new SqlConnectionStringBuilder
             {
                 DataSource = @"localhost",
-                InitialCatalog = "Globalmantics"
+                InitialCatalog = "Globalmantics",
+                IntegratedSecurity = false,
+                UserID = "SA",
+                Password = "Qwe12345"
             };
     }
 }
