@@ -20,13 +20,15 @@ jobs:
       - name: Build app for release
         run:  dotnet build --configuration Release
         
-      # - name: Install a SQL Server suite of tools
-      #   uses: potatoqualitee/mssqlsuite@v1
-      #   with:
-      #     install: sqlengine, sqlpackage
+      - name: Install a SQL Server suite of tools
+        uses: potatoqualitee/mssqlsuite@v1
+        with:
+          install: sqlengine, sqlpackage
+          sa-password: c0MplicatedP@ssword
+          show-log: true
 
       - name: Run sqlclient
-        run: sqlcmd -S localhost -U SA -P Qwe12345 -d tempdb -Q "SELECT @@version;"    
+        run: sqlcmd -S localhost -U sa -P dbatools.I0 -d tempdb -Q "SELECT @@version;"    
 
       - name: Run Unit Tests
         run: dotnet test ./test/Globalmantics.UnitTests/Globalmantics.UnitTests.csproj --logger "trx;LogFileName=test-result.trx"
