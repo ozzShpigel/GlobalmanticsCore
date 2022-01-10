@@ -99,7 +99,7 @@ namespace Globalmantics.IntegrationTests
                 DataSource = @"localhost",
                 InitialCatalog = "master",
                 IntegratedSecurity = false,
-                UserID = "SA",
+                UserID = "sa",
                 Password = "Qwe12345"
             };
 
