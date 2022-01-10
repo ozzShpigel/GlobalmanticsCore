@@ -100,7 +100,7 @@ namespace Globalmantics.IntegrationTests
                 InitialCatalog = "master",
                 IntegratedSecurity = false,
                 UserID = "sa",
-                Password = "Qwe12345"
+                Password = "dbatools.I0"
             };
 
         //private static string Filename => Path.Combine(
