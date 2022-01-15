@@ -8,14 +8,14 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@master
       - uses: nuget/setup-nuget@v1
 
-      # - name: Nuget restore       
-      #   run: nuget restored
+      - name: Nuget restore       
+        run: nuget restored
 
       - name: Build app for release
         run:  dotnet build --configuration Release

@@ -27,7 +27,7 @@ namespace Globalmantics.IntegrationTests
             ExecuteSqlCommand(Master, $@"
                 CREATE DATABASE [Globalmantics]
                 ON (NAME = 'Globalmantics',
-                FILENAME = '{Filename()}')");
+                FILENAME = '{Filename}')");
 
             using (var context = GivenGlobalmanticsContext(beginTransaction: false))
             {
@@ -96,25 +96,14 @@ namespace Globalmantics.IntegrationTests
         private static SqlConnectionStringBuilder Master =>
             new SqlConnectionStringBuilder
             {
-                DataSource = @"localhost",
+                DataSource = @"(localdb)\MSSQLLocalDB",
                 InitialCatalog = "master",
-                IntegratedSecurity = false,
-                UserID = "sa",
-                Password = "dbatools.I0"
+                IntegratedSecurity = true,
             };
 
-        //private static string Filename => Path.Combine(
-        //    Path.GetDirectoryName(
-        //        typeof(TestSetup).GetTypeInfo().Assembly.Location),
-        //    "Globalmantics.mdf");
-
-        private static string Filename() {
-            var a = Path.Combine(
+        private static string Filename => Path.Combine(
             Path.GetDirectoryName(
                 typeof(TestSetup).GetTypeInfo().Assembly.Location),
             "Globalmantics.mdf");
-
-            return a;
-        }
     }
 }

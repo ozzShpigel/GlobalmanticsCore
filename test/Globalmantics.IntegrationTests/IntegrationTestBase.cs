@@ -19,9 +19,9 @@ namespace Globalmantics.IntegrationTests
         private static SqlConnectionStringBuilder Globalmantics =>
             new SqlConnectionStringBuilder
             {
-                DataSource = @"localhost",
+                DataSource = @"(localdb)\MSSQLLocalDB",
                 InitialCatalog = "Globalmantics",
-                IntegratedSecurity = false,
+                IntegratedSecurity = true,
             };
     }
 }
