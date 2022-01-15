@@ -15,7 +15,7 @@ jobs:
       - uses: nuget/setup-nuget@v1
 
       - name: Nuget restore       
-        run: nuget restored
+        run: nuget restore
 
       - name: Build app for release
         run:  dotnet build --configuration Release
