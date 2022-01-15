@@ -23,5 +23,21 @@ namespace Globalmantics.IntegrationTests
                 user.Email.Should().Be("test@globalmantics.com");
             }
         }
+
+        [Fact]
+        public void OzTest()
+        {
+            using (var context = GivenGlobalmanticsContext())
+            {
+                var userSerice = new UserService(context);
+
+                User user = userSerice.GetUserByEmail(
+                    "test1@globalmantics.com");
+                context.SaveChanges();
+
+                user.UserId.Should().NotBe(0);
+                user.Email.Should().Be("test1@globalmantics.com");
+            }
+        }
     }
 }
